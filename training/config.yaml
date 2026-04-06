@@ -1,0 +1,5 @@
+epochs: 20
+imgsz: 640
+batch: 16
+model: yolov8n.pt
+conf_threshold: 0.5
