@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 
 # Registry configuration
 REGISTRY_PATH = "models/registry"
+DEVICE = os.getenv("DEVICE", "cpu")
 
 # Disable ultralytics telemetry BEFORE importing
 os.environ['YOLO_TELEMETRY'] = 'false'
@@ -90,6 +91,7 @@ class DefectPredictor:
                 for attempt in range(3):
                     try:
                         self.model = YOLO(model_path)
+                        self.model.to(DEVICE)
                         self.model_path = model_path
                         logger.info(f"✅ Model loaded successfully on attempt {attempt + 1}")
                         break
@@ -125,7 +127,7 @@ class DefectPredictor:
                 return []
                 
             logger.info(f"Running prediction on: {image_path}")
-            results = self.model(image_path)[0]
+            results = self.model(image_path, device=DEVICE)[0]
             detections = []
 
             for box in results.boxes:
