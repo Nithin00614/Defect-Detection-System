@@ -21,8 +21,8 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
 
 COPY . .
 
-RUN chmod +x /app/docker/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
 EXPOSE 8000 8501
 
-ENTRYPOINT ["/bin/bash", "/app/docker/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
