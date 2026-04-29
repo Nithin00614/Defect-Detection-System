@@ -2,21 +2,27 @@ version: '3.8'
 
 services:
   defect-detection:
-    image: flappy10/defect-detection-dl:v1
+    build: .
+    image: flappy10/defect-detection-dl:latest
     container_name: defect-detection-app
+
     ports:
       - "8000:8000"
       - "8501:8501"
+
     environment:
-      - PYTHONUNBUFFERED=1
-      - BACKEND_URL=http://defect-detection:8000/predict
-      - DEVICE=cpu
+      PYTHONUNBUFFERED: 1
+      DEVICE: cpu
+      BACKEND_URL: http://127.0.0.1:8000/predict
+
     volumes:
       - ./models/registry:/app/models/registry
       - ./data:/app/data
+
     restart: unless-stopped
+
     healthcheck:
-      test: ["CMD", "python", "-c", "import requests; requests.get('http://defect-detection:8000/health', timeout=5)"]
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:8000/health || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
