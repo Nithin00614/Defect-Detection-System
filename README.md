@@ -1,5 +1,16 @@
 
-## Overview
+# 🚀 Industrial Defect Detection DL System – Real-Time Vision-Based Quality Inspection Pipeline
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-DeepLearning-red?logo=pytorch">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-green?logo=fastapi">
+  <img src="https://img.shields.io/badge/Streamlit-UI-orange?logo=streamlit">
+  <img src="https://img.shields.io/badge/Docker-Container-blue?logo=docker">
+  <img src="https://img.shields.io/badge/AWS-EC2-yellow?logo=amazonaws">
+</p>
+
+
+## 📌 Overview
 
 This project implements a **production-style deep learning defect detection system** demonstrating the complete model lifecycle, including training, versioned model registry, real-time inference, retraining pipelines, and deployment-ready APIs.
 
@@ -30,6 +41,15 @@ defect-detection-dl-system/
 ├── streamlit_app.py
 └── system_design.md
 ```
+
+---
+
+## 🌐 Deployment
+
+Deployed on AWS EC2 using Docker with Elastic IP
+
+- **Live App:** http://13.205.178.68:8501  
+- **API Docs:** http://13.205.178.68:8000/docs  
 
 ---
 
@@ -74,6 +94,6 @@ Refer to external dataset and preprocessing pipeline for YOLO conversion.
 
 Detailed architecture, design decisions, lifecycle considerations, and failure analysis are available in:
 
-👉 **system_design.md**
+👉**System Design:** [system_design.md](./system_design.md)
 
 ---
