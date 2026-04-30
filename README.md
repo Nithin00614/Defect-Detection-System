@@ -94,6 +94,6 @@ Refer to external dataset and preprocessing pipeline for YOLO conversion.
 
 Detailed architecture, design decisions, lifecycle considerations, and failure analysis are available in:
 
-👉**System Design:** [system_design.md](./system_design.md)
+👉 [system_design.md](./system_design.md)
 
 ---
