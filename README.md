@@ -88,6 +88,7 @@ Refer to external dataset and preprocessing pipeline for YOLO conversion.
 - FastAPI
 - Streamlit
 - Docker
+- AWS (EC2)
 
 ---
 ## Documentation
