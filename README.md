@@ -12,7 +12,7 @@
 
 ## 📌 Overview
 
-This project implements a **production-style deep learning defect detection system** demonstrating the complete model lifecycle, including training, versioned model registry, real-time inference, retraining pipelines, and deployment-ready APIs.
+This project implements a **Production-style deep learning defect detection system** demonstrating the complete model lifecycle, including training, versioned model registry, real-time inference, retraining pipelines, and deployment-ready APIs.
 
 The system detects industrial surface defects using a YOLO-based object detection model and exposes a FastAPI inference service with a lightweight Streamlit visualization interface.
 
@@ -93,7 +93,7 @@ Refer to external dataset and preprocessing pipeline for YOLO conversion.
 ---
 ## Documentation
 
-Detailed architecture, design decisions, lifecycle considerations, and failure analysis are available in:
+Detailed architecture, design decisions, lifecycle considerations and failure analysis are available in:
 
 👉 [system_design.md](./system_design.md)
 
