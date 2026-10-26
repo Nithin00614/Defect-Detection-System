@@ -76,7 +76,7 @@ docker -compose up --build
 
 ## Dataset
 
-The dataset is not included due to size.
+The Dataset is not included due to size.
 Refer to external dataset and preprocessing pipeline for YOLO conversion.
 
 ---

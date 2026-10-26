@@ -14,7 +14,7 @@ def train():
 
     model.train(
         data="data.yaml",
-        epochs=20,
+        epochs=30,
         imgsz=640,
         batch=16
     )
