@@ -2,7 +2,7 @@ import os
 from training.train import train
 
 def retrain():
-    print("Starting retraining...")
+    print("Starting Retraining...")
     train()
     print("Retraining complete and new model promoted")
 
