@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 REGISTRY_PATH = "models/registry"
 DEVICE = os.getenv("DEVICE", "cpu")
 
-# Disable ultralytics telemetry BEFORE importing
+# Disable ultralytics telemetry BEFORE Importing
 os.environ['YOLO_TELEMETRY'] = 'false'
 os.environ['YOLO_VERBOSE'] = 'false'
 

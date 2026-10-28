@@ -11,7 +11,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Defect Detection API", version="1.0.0")
+app = FastAPI(title="Defect Detection API", version="2.0.0")
 
 # Initialize predictor lazily
 predictor = None
@@ -24,7 +24,7 @@ def get_predictor():
         try:
             predictor = DefectPredictor()
             if predictor.model is None:
-                logger.warning("⚠️ Predictor initialized but model is unavailable")
+                logger.warning("⚠️ Predictor Initialized but model is unavailable")
         except Exception as e:
             logger.error(f"Failed to initialize predictor: {e}")
             predictor = None
@@ -41,7 +41,7 @@ async def startup():
 
 @app.post("/predict", response_model=PredictionResponse)
 async def predict(file: UploadFile = File(...)):
-    """Predict defects in uploaded image."""
+    """Predict Defects in uploaded image."""
     temp_path = f"temp_{file.filename}"
 
     try:
